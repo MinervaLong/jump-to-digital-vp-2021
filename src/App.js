@@ -148,6 +148,7 @@ const App = () => {
       <BackToTheMarket />
       <AppleButton />
       <Footer />
+      <Product />
       <section id='PayForm'>
         <p>Or pay with card</p>
           <form onSubmit={handleSubmit}>
