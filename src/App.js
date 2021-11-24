@@ -144,14 +144,13 @@ const App = () => {
 
   return (
     <div>
-      <h1>Front-end Challenge</h1>
       <BackToTheMarket />
       <AppleButton />
       <Footer />
       <Product />
-      <section id='PayForm'>
+      <section id='PayForm'aria-label='Pay form section'>
         <p>Or pay with card</p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} aria-label='Credit card form'>
             <label htmlFor='email'>Email</label>
             <input
               id='email'
@@ -161,7 +160,7 @@ const App = () => {
             />
             <span>{emailError}</span>
                 
-            <label htmlFor='cardData'>Card data</label>
+            <label>Card data</label>
             <input
               id='cardNumber'
               aria-label='Card number'
@@ -199,7 +198,7 @@ const App = () => {
             />   
             <span>{nameError}</span>               
 
-            <label htmlFor='countryOrRegion'>Country or region</label>
+            <label>Country or region</label>
             <select
               id='countryOrRegion'
               aria-label='Select a country' 
@@ -217,7 +216,7 @@ const App = () => {
             />
             <span>{callError}</span>
 
-            <PriceButton/>              
+            <PriceButton />              
           </form>            
       </section>
     </div>
