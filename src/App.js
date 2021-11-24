@@ -4,7 +4,10 @@ import axios from 'axios'
 import BackToTheMarket from './components/BackToTheMarket/BackToTheMarket'
 import Product from './components/Product/Product'
 import AppleButton from './components/Button/Button'
+import PriceButton from './components/Button/Button'
 import Footer from './components/Footer/Footer'
+// Images & Icons
+import AppleIcon from './assets/icons/apple_logo_icon.png'
 
 
 const API_URL = 'https://countriesnow.space/api/v0.1/countries/iso';
@@ -141,10 +144,13 @@ const App = () => {
 
   return (
     <div>
-      <h1>Front-end Challenge</h1>
-      <section id='PayForm'>
+      <BackToTheMarket />
+      <AppleButton />
+      <Footer />
+      <Product />
+      <section id='PayForm'aria-label='Pay form section'>
         <p>Or pay with card</p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} aria-label='Credit card form'>
             <label htmlFor='email'>Email</label>
             <input
               id='email'
@@ -154,7 +160,7 @@ const App = () => {
             />
             <span>{emailError}</span>
                 
-            <label htmlFor='cardData'>Card data</label>
+            <label>Card data</label>
             <input
               id='cardNumber'
               aria-label='Card number'
@@ -192,7 +198,7 @@ const App = () => {
             />   
             <span>{nameError}</span>               
 
-            <label htmlFor='countryOrRegion'>Country or region</label>
+            <label>Country or region</label>
             <select
               id='countryOrRegion'
               aria-label='Select a country' 
@@ -210,7 +216,7 @@ const App = () => {
             />
             <span>{callError}</span>
 
-            <input type='submit' value='Pay $899.00'/>              
+            <PriceButton />              
           </form>            
       </section>
     </div>
