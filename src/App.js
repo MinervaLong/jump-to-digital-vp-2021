@@ -4,7 +4,10 @@ import axios from 'axios'
 import BackToTheMarket from './components/BackToTheMarket/BackToTheMarket'
 import Product from './components/Product/Product'
 import AppleButton from './components/Button/Button'
+import PriceButton from './components/Button/Button'
 import Footer from './components/Footer/Footer'
+// Images & Icons
+import AppleIcon from './assets/icons/apple_logo_icon.png'
 
 
 const API_URL = 'https://countriesnow.space/api/v0.1/countries/iso';
@@ -143,6 +146,7 @@ const App = () => {
     <div>
       <h1>Front-end Challenge</h1>
       <BackToTheMarket />
+      <AppleButton />
       <section id='PayForm'>
         <p>Or pay with card</p>
           <form onSubmit={handleSubmit}>
@@ -211,7 +215,7 @@ const App = () => {
             />
             <span>{callError}</span>
 
-            <input type='submit' value='Pay $899.00'/>              
+            <PriceButton/>              
           </form>            
       </section>
     </div>
