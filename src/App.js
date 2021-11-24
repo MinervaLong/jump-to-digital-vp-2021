@@ -142,6 +142,7 @@ const App = () => {
   return (
     <div>
       <h1>Front-end Challenge</h1>
+      <BackToTheMarket />
       <section id='PayForm'>
         <p>Or pay with card</p>
           <form onSubmit={handleSubmit}>
