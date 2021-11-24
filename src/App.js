@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './assets/sass/App.scss'
 import validator from 'validator';
 import axios from 'axios'
 import BackToTheMarket from './components/BackToTheMarket/BackToTheMarket'
