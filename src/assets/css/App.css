@@ -49,3 +49,41 @@ body {
 .getBack p {
   margin: 0;
 }
+
+/* PRODUCT COMPONENT */
+.product {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.product .product__textWrapper {
+  text-align: center;
+}
+.product .product__textWrapper small {
+  align-self: center;
+}
+.product .product__textWrapper .product__priceWrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.product .product__textWrapper .product__priceWrapper img {
+  width: 2rem;
+  height: 2rem;
+}
+.product .product__textWrapper .product__priceWrapper p {
+  margin: 0;
+  font-size: 20pt;
+  font-weight: bold;
+  color: #000;
+}
+.product figure {
+  margin: 0;
+}
+.product figure .product__laptop {
+  width: 10rem;
+  height: 10rem;
+}
