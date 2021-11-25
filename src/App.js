@@ -153,76 +153,92 @@ const App = () => {
         iconStyles={{width: '1.8rem', height: '1.8rem'}} 
         className='appleButton'
         type='submit'
-      />
-      <Footer />
+      />      
       <Product />
-      <section id='PayForm'aria-label='Pay form section'>
-        <p>Or pay with card</p>
-          <form onSubmit={handleSubmit} aria-label='Credit card form'>
-            <label htmlFor='email'>Email</label>
-            <input
-              id='email'
-              type='email'
-              name='email'                    
-              onChange={(event) => validateEmail(event.target.value)}
-            />
-            <span>{emailError}</span>
-                
-            <label>Card data</label>
-            <input
-              id='cardNumber'
-              aria-label='Card number'
-              type='text'
-              name='cardNumber'                    
-              placeholder='1234 1234 1234 1234'
-              onChange={(event) => validateCardNumber(event.target.value)}
-            />
-            <span>{cardNumError}</span>
-            <input
-              id='cardDate'
-              aria-label='Card expiry date' 
-              type='text'
-              name='cardDate'
-              placeholder='MM/YY'                   
-              onChange={(event) => validateDate(event.target.value)}
-            />
-            <span>{dateError}</span>
-            <input
-              id='cvc'
-              aria-label='Card CVC'
-              type='text'
-              name='cvc'
-              placeholder='CVC'
-              onChange={(event) => validateCVC(event.target.value)}
-            /> 
-            <span>{cvcError}</span>                  
+      <section className='payForm' id='PayForm' aria-label='Pay form section'>
+        <p className='lineText'><span>Or pay with card</span></p>
+          <form className='form' onSubmit={handleSubmit} aria-label='Credit card form'>
+            <div className='form__inputWrapper'>
+              <label htmlFor='email'>Email</label>
+              <input
+                id='email'
+                className='boxShadow'
+                type='email'
+                name='email'                    
+                onChange={(event) => validateEmail(event.target.value)}
+              />
+              <span>{emailError}</span>
+            </div>
 
-            <label htmlFor='cardName'>Name on card</label>
-            <input
-              id='cardName'
-              type='text'
-              name='cardName'
-              onChange = {(event) => validateName(event.target.value)}
-            />   
-            <span>{nameError}</span>               
+            <div className='form__inputWrapper'>    
+              <label>Card data</label>
 
-            <label>Country or region</label>
-            <select
-              id='countryOrRegion'
-              aria-label='Select a country' 
-              name='country'
-              onChange={asignZIP}
-              required
-            >{options}</select>
-            <input
-              id='ZIP'
-              value={zip}
-              aria-label='ZIP code'
-              type='text'
-              name='zipCode'
-              disabled
-            />
-            <span>{callError}</span>
+              <div className='inputGroup'>
+                <div className='inputGroup__top'>
+                  <input
+                    id='cardNumber'
+                    aria-label='Card number'
+                    type='text'
+                    name='cardNumber'                    
+                    placeholder='1234 1234 1234 1234'
+                    onChange={(event) => validateCardNumber(event.target.value)}
+                  /> 
+                </div>  
+              
+                <div className='inputGroup__down boxShadow'>         
+                  <input 
+                    id='cardDate'
+                    aria-label='Card expiry date' 
+                    type='text'
+                    name='cardDate'
+                    placeholder='MM/YY'                   
+                    onChange={(event) => validateDate(event.target.value)}
+                  />              
+                  <input
+                    id='cvc'
+                    aria-label='Card CVC'
+                    type='text'
+                    name='cvc'
+                    placeholder='CVC'
+                    onChange={(event) => validateCVC(event.target.value)}
+                  />
+                </div> 
+                <span>{cardNumError}</span><span>{dateError}</span><span>{cvcError}</span>                  
+              </div>
+            </div>
+
+            <div className='form__inputWrapper'>
+              <label htmlFor='cardName'>Name on card</label>
+              <input
+                id='cardName'
+                className='boxShadow'
+                type='text'
+                name='cardName'
+                onChange = {(event) => validateName(event.target.value)}
+              />   
+              <span>{nameError}</span>               
+            </div>
+
+            <div className='form__inputWrapper'>
+              <label>Country or region</label>
+              <select className='form__inputWrapper--selectBg'
+                id='countryOrRegion'
+                aria-label='Select a country' 
+                name='country'
+                onChange={asignZIP}
+                required
+              >{options}</select>
+              <input
+                id='ZIP'
+                className='boxShadow'
+                value={zip}
+                aria-label='ZIP code'
+                type='text'
+                name='zipCode'
+                disabled
+              />
+              <span>{callError}</span>
+            </div>
 
             <PriceButton
               text = 'Pay $899.00'
@@ -231,8 +247,10 @@ const App = () => {
               className='priceButton'
               type='submit'
             />              
-          </form>            
+          </form>
+
       </section>
+      <Footer />
     </div>
   );
 }
