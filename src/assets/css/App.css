@@ -1,7 +1,34 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 10pt;
+  color: dimgray;
   box-sizing: border-box;
   margin: unset;
   padding: 4rem 2.5rem;
+}
+
+.footer .footer__redsysWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.footer .footer__redsysWrapper img {
+  width: 4.5rem;
+  height: 2rem;
+}
+.footer .footer__linksWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.footer .footer__linksWrapper a {
+  text-decoration: none;
+}
+.footer .footer__linksWrapper .footer__linksWrapper--terms {
+  margin-right: 1rem;
+}
+.footer .footer__linksWrapper .footer__linksWrapper--priv {
+  margin-left: 1rem;
 }

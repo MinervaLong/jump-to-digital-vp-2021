@@ -1,15 +1,19 @@
+
 import Redsys from '../../assets/images/redsys_logo.jpg'
 
 const Footer = () => {
     return (
-        <section>
-            <p>Powered by</p> <img alt='Redsys logo' src={Redsys} width='50px'/>
-            <p>|</p>
-            <div>
-                <a href='https://en.wikipedia.org/wiki/Contractual_term'>Terms</a>
-                <a href='https://en.wikipedia.org/wiki/Privacy'>Privacy</a>
+        <footer className='footer'>
+            <div className='footer__redsysWrapper'>
+                <p>Powered by</p> 
+                <img alt='Redsys logo' src={Redsys} />
             </div>
-        </section>
+            
+            <div className='footer__linksWrapper'>
+                <a className='footer__linksWrapper--terms' href='https://en.wikipedia.org/wiki/Contractual_term'>Terms</a>
+                <a className='footer__linksWrapper--priv' href='https://en.wikipedia.org/wiki/Privacy'>Privacy</a>
+            </div>
+        </footer>
     )
 }
 
