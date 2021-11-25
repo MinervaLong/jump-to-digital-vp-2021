@@ -2,8 +2,8 @@
  
  const BackToTheMarket = () => {
     return (
-        <section aria-label='Fake option to take a step back in the payment'>
-            <span><img alt='Left arrow'src={LeftArrow} width='20px'/></span>
+        <section className='getBack' aria-label='Fake option to take a step back in the payment'>
+            <img alt='Left arrow'src={LeftArrow} />
             <p>Back to the market</p>
         </section>
     )

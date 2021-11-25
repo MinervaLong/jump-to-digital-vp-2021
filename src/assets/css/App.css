@@ -32,3 +32,20 @@ body {
 .footer .footer__linksWrapper .footer__linksWrapper--priv {
   margin-left: 1rem;
 }
+
+/*BACK TO THE MARKET COMPONENT */
+.getBack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.getBack img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+}
+.getBack p {
+  margin: 0;
+}

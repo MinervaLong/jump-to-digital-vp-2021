@@ -40,4 +40,22 @@ body {
     }
 }
     
+ /*BACK TO THE MARKET COMPONENT */
+ 
+ .getBack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     
+    img {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 1rem;
+    }
+
+    p {
+        margin: 0;
+    }
+ }
