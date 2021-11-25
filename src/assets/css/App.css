@@ -1,3 +1,4 @@
+/*VARIABLES*/
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 10pt;
@@ -86,4 +87,40 @@ body {
 .product figure .product__laptop {
   width: 10rem;
   height: 10rem;
+}
+
+/* BUTTON COMPONENT */
+.btn {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  border: none;
+  cursor: pointer;
+}
+.btn .btn__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Classes depending of type of button */
+.appleButton {
+  background-color: #000;
+  color: #FFF;
+}
+
+.priceButton {
+  background-color: #3C4257;
+  border: none;
+  color: dimgray;
 }

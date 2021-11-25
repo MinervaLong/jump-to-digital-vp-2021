@@ -8,7 +8,7 @@ import AppleButton from './components/Button/Button'
 import PriceButton from './components/Button/Button'
 import Footer from './components/Footer/Footer'
 // Images & Icons
-import AppleIcon from './assets/icons/apple_logo_icon.png'
+import AppleIcon from './assets/icons/apple_logo.png'
 
 
 const API_URL = 'https://countriesnow.space/api/v0.1/countries/iso';
@@ -146,7 +146,14 @@ const App = () => {
   return (
     <div>
       <BackToTheMarket />
-      <AppleButton />
+      <AppleButton  
+        text = 'Pay'
+        icon={AppleIcon}
+        iconPresence={true}
+        iconStyles={{width: '1.8rem', height: '1.8rem'}} 
+        className='appleButton'
+        type='submit'
+      />
       <Footer />
       <Product />
       <section id='PayForm'aria-label='Pay form section'>
@@ -217,7 +224,13 @@ const App = () => {
             />
             <span>{callError}</span>
 
-            <PriceButton />              
+            <PriceButton
+              text = 'Pay $899.00'
+              textStyles={{fontSize: '15pt', color: `$fontColor`}}
+              iconPresence={false}
+              className='priceButton'
+              type='submit'
+            />              
           </form>            
       </section>
     </div>

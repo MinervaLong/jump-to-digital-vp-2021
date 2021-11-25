@@ -1,10 +1,17 @@
+/*VARIABLES*/
+
+$fontColor: dimgray;
+$priceBtnColor: #3C4257;
+$appleBtnColor: #000;
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10pt;
-    color: dimgray;
+    color: $fontColor;
     box-sizing: border-box;
     margin: unset;
-    padding: 4rem 2.5rem ;
+    padding: 4rem 2.5rem;
+
 }
 
 .footer{
@@ -96,7 +103,7 @@ body {
 
         }
     }
-    
+
     figure {
         margin: 0;
 
@@ -106,4 +113,43 @@ body {
         }
     }
    
+ }
+
+ /* BUTTON COMPONENT */
+
+ .btn {   
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2;
+    transition: all 200ms linear;
+    border-radius: 4px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    border: none;
+    cursor: pointer;
+
+    .btn__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+     }
+ } 
+
+ /* Classes depending of type of button */
+
+ .appleButton {
+    background-color: $appleBtnColor;
+    color: #FFF;
+ }
+
+ .priceButton {
+    background-color: $priceBtnColor;
+    border: none;
+    color: $fontColor;
  }
