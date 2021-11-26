@@ -19,7 +19,8 @@ body {
     margin-bottom: 2.5rem;
 }
 
-  
+/*-------------------------------------MOBILE & TABLET VIEW------------------------------------------*/
+
  /*BACK TO THE MARKET COMPONENT */
  
  .getBack {
@@ -236,4 +237,34 @@ body {
         }
     }
 }
+
+/*---------------------------------------------DESKTOP VIEW--------------------------------------*/
+
+.desktopView {
+    /*border: 1px solid black;*/
+    margin: 0;
+    padding:0;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0px 5px 13px 0px rgba(50, 50, 50, 0.39);
+    align-items: center;
+}
+
+.desktopView__col {        
+    border:none;
+    flex: 1;
+    
+}
+
+.desktopView__col--left {
+    border: 1px solid black;
+}
+
+.desktopView__col--right {  
+    border: 1px solid black;
+    box-shadow: -5px 0px 13px 0px rgba(50, 50, 50, 0.39);
+}
+
+
+
   

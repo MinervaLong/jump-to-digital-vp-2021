@@ -13,7 +13,26 @@ import AppleIcon from './assets/icons/apple_logo.png'
 
 const API_URL = 'https://countriesnow.space/api/v0.1/countries/iso';
 
+const useViewPort =() => {
+  // Declare the variable which store the state os the windows size
+  const [width, setWidth] = useState(window.innerWidth);
+  
+  const handleWindowResize = () => setWidth(window.innerWidth);
+  useEffect(() => {
+    // Update the size of the window when it changes 
+    window.addEventListener('resize', () => setWidth(window.innerWidth));
+    // Removes the Event Listener
+    return () => window.removeEventListener('resize', handleWindowResize);
+  },[]);
+
+  return {width}
+}
+
 const App = () => {
+  // RESPONSIVE LAYOUT
+  const {width} = useViewPort();
+  const breakPoint = 1024;
+
   // VALIDATE FORM INPUTS
   const [emailError, setEmailError] = useState('');
   const validateEmail = (value) => {
@@ -145,7 +164,8 @@ const App = () => {
 
   return (
     <main className='container'>
-
+    { width < breakPoint ? 
+    <div>
       {/*BACK TO THE MARKET */}
       <section className='container__component'>
         <BackToTheMarket />
@@ -268,7 +288,144 @@ const App = () => {
       <section className='container__component'>
         <Footer />
       </section>
+    </div>
+    
+    :
+    
+   (<div className='desktopView'> 
 
+     <div className='desktopView__col desktopView__col--left'>
+       {/*BACK TO THE MARKET */}
+       <section className=''>
+        <BackToTheMarket />
+      </section>
+
+      {/* PRODUCT */}
+      <section className=''> 
+        <Product />
+      </section>
+
+       {/* FOOTER */}
+       <section className=''>
+        <Footer />
+      </section>
+
+    </div>
+
+    <div className='desktopView__col desktopView__col--right'>
+      {/* APPLE BUTTON*/}
+      <section className=''>
+        <AppleButton  
+          text = 'Pay'
+          icon={AppleIcon}
+          iconPresence={true}
+          iconStyles={{width: '1.8rem', height: '1.8rem'}} 
+          className='appleButton'
+          type='submit'
+        />
+       </section>
+
+      {/* PAYFORM */}
+      <section className='' id='PayForm' aria-label='Pay form section'>
+        <p className='lineText'><span>Or pay with card</span></p>
+          <form className='form' onSubmit={handleSubmit} aria-label='Credit card form'>
+            <div className='form__inputWrapper'>
+              <label htmlFor='email'>Email</label>
+              <input
+                id='email'
+                className='form--boxShadow'
+                type='email'
+                name='email'                    
+                onChange={(event) => validateEmail(event.target.value)}
+              />
+              <span>{emailError}</span>
+            </div>
+
+            <div className='form__inputWrapper'>    
+              <label>Card data</label>
+
+              <div className='inputGroup'>
+                <div className='inputGroup__top'>
+                  <input
+                    id='cardNumber'
+                    aria-label='Card number'
+                    type='text'
+                    name='cardNumber'                    
+                    placeholder='1234 1234 1234 1234'
+                    onChange={(event) => validateCardNumber(event.target.value)}
+                  /> 
+                </div>  
+              
+                <div className='inputGroup__down form--boxShadow'>         
+                  <input 
+                    id='cardDate'
+                    aria-label='Card expiry date' 
+                    type='text'
+                    name='cardDate'
+                    placeholder='MM/YY'                   
+                    onChange={(event) => validateDate(event.target.value)}
+                  />              
+                  <input
+                    id='cvc'
+                    aria-label='Card CVC'
+                    type='text'
+                    name='cvc'
+                    placeholder='CVC'
+                    onChange={(event) => validateCVC(event.target.value)}
+                  />
+                </div> 
+                <span>{cardNumError}</span><span>{dateError}</span><span>{cvcError}</span>                  
+              </div>
+            </div>
+
+            <div className='form__inputWrapper'>
+              <label htmlFor='cardName'>Name on card</label>
+              <input
+                id='cardName'
+                className='form--boxShadow'
+                type='text'
+                name='cardName'
+                onChange = {(event) => validateName(event.target.value)}
+              />   
+              <span>{nameError}</span>               
+            </div>
+
+            <div className='form__inputWrapper'>
+              <label>Country or region</label>
+              <select className='form__inputWrapper--selectBg'
+                id='countryOrRegion'
+                aria-label='Select a country' 
+                name='country'
+                onChange={asignZIP}
+                required
+              >{options}</select>
+              <input
+                id='ZIP'
+                className='form--boxShadow'
+                value={zip}
+                aria-label='ZIP code'
+                type='text'
+                name='zipCode'
+                disabled
+              />
+              <span>{callError}</span>
+            </div>
+
+            <PriceButton
+              text = 'Pay $899.00'
+              textStyles={{fontSize: '15pt', color: `$fontColor`}}
+              iconPresence={false}
+              className='priceButton'
+              type='submit'
+            />              
+          </form>
+        </section>
+     
+    </div>
+    
+    </div>)
+
+    }
     </main>
   );
 }
