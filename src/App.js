@@ -144,25 +144,39 @@ const App = () => {
   const asignZIP = (e) => {setZip(e.target.value)}
 
   return (
-    <div>
-      <BackToTheMarket />
-      <AppleButton  
-        text = 'Pay'
-        icon={AppleIcon}
-        iconPresence={true}
-        iconStyles={{width: '1.8rem', height: '1.8rem'}} 
-        className='appleButton'
-        type='submit'
-      />      
-      <Product />
-      <section className='payForm' id='PayForm' aria-label='Pay form section'>
+    <main className='container'>
+
+      {/*BACK TO THE MARKET */}
+      <section className='container__component'>
+        <BackToTheMarket />
+      </section>
+
+      {/* PRODUCT */}
+      <section className='container__component'> 
+        <Product />
+      </section>
+
+      {/* APPLE BUTTON*/}
+      <section className='container__component'>
+        <AppleButton  
+          text = 'Pay'
+          icon={AppleIcon}
+          iconPresence={true}
+          iconStyles={{width: '1.8rem', height: '1.8rem'}} 
+          className='appleButton'
+          type='submit'
+        />
+       </section>
+
+      {/* PAYFORM */}
+      <section className='container__component' id='PayForm' aria-label='Pay form section'>
         <p className='lineText'><span>Or pay with card</span></p>
           <form className='form' onSubmit={handleSubmit} aria-label='Credit card form'>
             <div className='form__inputWrapper'>
               <label htmlFor='email'>Email</label>
               <input
                 id='email'
-                className='boxShadow'
+                className='form--boxShadow'
                 type='email'
                 name='email'                    
                 onChange={(event) => validateEmail(event.target.value)}
@@ -185,7 +199,7 @@ const App = () => {
                   /> 
                 </div>  
               
-                <div className='inputGroup__down boxShadow'>         
+                <div className='inputGroup__down form--boxShadow'>         
                   <input 
                     id='cardDate'
                     aria-label='Card expiry date' 
@@ -211,7 +225,7 @@ const App = () => {
               <label htmlFor='cardName'>Name on card</label>
               <input
                 id='cardName'
-                className='boxShadow'
+                className='form--boxShadow'
                 type='text'
                 name='cardName'
                 onChange = {(event) => validateName(event.target.value)}
@@ -230,7 +244,7 @@ const App = () => {
               >{options}</select>
               <input
                 id='ZIP'
-                className='boxShadow'
+                className='form--boxShadow'
                 value={zip}
                 aria-label='ZIP code'
                 type='text'
@@ -248,10 +262,14 @@ const App = () => {
               type='submit'
             />              
           </form>
-
+        </section>
+     
+      {/* FOOTER */}
+      <section className='container__component'>
+        <Footer />
       </section>
-      <Footer />
-    </div>
+
+    </main>
   );
 }
 

@@ -15,6 +15,10 @@ body {
 
 }
 
+.container__component {
+    margin-bottom: 2.5rem;
+}
+
   
  /*BACK TO THE MARKET COMPONENT */
  
@@ -75,10 +79,12 @@ body {
 
     figure {
         margin: 0;
+        text-align: center;
 
         .product__laptop {
-            width: 10rem;
-            height: 10rem;
+            min-width: 10rem;
+            width: 35%;
+            height: auto;
         }
     }
    
@@ -131,10 +137,11 @@ body {
     border-bottom: 1px solid #ddd;
     line-height: 0;
     padding: 0;
+    margin-bottom: 3rem;
 
     span {
         background-color: #fff;
-        padding: 0;
+        padding: 0;        
     }
  }
 
@@ -147,7 +154,7 @@ body {
     flex-wrap: nowrap;
     justify-content: space-evenly;
 
-    .boxShadow {
+    .form--boxShadow {
         box-shadow: 0px 3px 5px 0px rgba(181, 181, 181, 0.75);
     }
 
