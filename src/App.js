@@ -7,26 +7,14 @@ import Product from './components/Product/Product'
 import AppleButton from './components/Button/Button'
 import PriceButton from './components/Button/Button'
 import Footer from './components/Footer/Footer'
+import useViewPort from './hooks/UseViewPort';
 // Images & Icons
 import AppleIcon from './assets/icons/apple_logo.png'
 
 
 const API_URL = 'https://countriesnow.space/api/v0.1/countries/iso';
 
-const useViewPort =() => {
-  // Declare the variable which store the state os the windows size
-  const [width, setWidth] = useState(window.innerWidth);
-  
-  const handleWindowResize = () => setWidth(window.innerWidth);
-  useEffect(() => {
-    // Update the size of the window when it changes 
-    window.addEventListener('resize', () => setWidth(window.innerWidth));
-    // Removes the Event Listener
-    return () => window.removeEventListener('resize', handleWindowResize);
-  },[]);
 
-  return {width}
-}
 
 const App = () => {
   // RESPONSIVE LAYOUT
