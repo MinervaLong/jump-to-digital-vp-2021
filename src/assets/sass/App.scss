@@ -240,6 +240,16 @@ body {
 
 /*---------------------------------------------DESKTOP VIEW--------------------------------------*/
 
+/*Footer*/
+
+.footer--desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .desktopView {
     /*border: 1px solid black;*/
     margin: 0;
