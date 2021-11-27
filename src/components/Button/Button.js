@@ -1,8 +1,29 @@
-const  Button = ({type, value}) => {
+
+
+const  Button = ({
+    type,
+    text,
+    className,
+    textStyles,
+    icon,
+    iconPresence,
+    iconStyles,
+    animated
+}) => {
+    
     return(
-        <div>
-            <button type={type} value={value} >Pay<span></span></button>
-        </div>
+        <button 
+            type={type}
+            className={`${className} btn`}
+        >
+        {iconPresence === true ?
+            <div className='btn__wrapper'>
+                <img alt='Apple Payment' src={icon} style={{...iconStyles}} /><span style={{...textStyles}}>{text}</span>
+            </div> 
+            :
+            <span style={{...textStyles}}>{text}</span>     
+            }
+        </button>       
     )
 }
 
