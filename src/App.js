@@ -284,13 +284,13 @@ const App = () => {
 
      <div className='desktopView__col desktopView__col--left'>
        {/*BACK TO THE MARKET */}
-       <section className=''>
-        <BackToTheMarket />
+       <section className='container__component'>
+        <BackToTheMarket />        
       </section>
 
       {/* PRODUCT */}
       <section className=''> 
-        <Product />
+       <Product />
       </section>
 
        {/* FOOTER */}
