@@ -8,7 +8,7 @@ const useViewPort =() => {
     useEffect(() => {
       const handleWindowResize = () => setWidth(window.innerWidth);
       // Update the size of the window when it changes 
-      window.addEventListener('resize', () => setWidth(window.innerWidth));
+      window.addEventListener('resize', handleWindowResize);
       // Removes the Event Listener
       return () => window.removeEventListener('resize', handleWindowResize);
     },[]);
