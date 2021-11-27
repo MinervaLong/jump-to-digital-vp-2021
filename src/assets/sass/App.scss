@@ -15,11 +15,21 @@ body {
 
 }
 
+
+
 .container__component {
     margin-bottom: 2.5rem;
 }
 
 /*-------------------------------------MOBILE & TABLET VIEW------------------------------------------*/
+
+.mobileView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-evenly;
+    align-items: center;
+}
 
  /*BACK TO THE MARKET COMPONENT */
  
@@ -130,6 +140,11 @@ body {
     color: $fontColor;
  }
 
+ #payForm {
+     width: 400px;
+     max-width: 100%;
+ }
+
  /* TEXT BETWEEN HORIZONTAL LINE */
 
  .lineText {
@@ -138,7 +153,7 @@ body {
     border-bottom: 1px solid #ddd;
     line-height: 0;
     padding: 0;
-    margin-bottom: 3rem;
+    margin: 3rem 0 3rem 0;
 
     span {
         background-color: #fff;
@@ -163,6 +178,8 @@ body {
         line-height: 2;
         border: 1px solid $inputBorder;
         border-radius: 4px;
+        display: block;
+        padding: 0.2rem;
     }
 
     .form__inputWrapper--selectBg {
@@ -177,6 +194,8 @@ body {
        flex-direction: column;
        flex-wrap: nowrap;
        justify-content: center;
+       padding-bottom: 20px;
+       position: relative;
    
        label {
            margin-bottom: 0.6rem;
@@ -196,12 +215,154 @@ body {
            justify-content: center;
 
            input {
-            width: 50%;
-           }
-              
-       }    
+               width: 95%;
+            }
+        }
+        
+        .visaPos, .masterPos, .amexPos, .discPos {
+            position: absolute;
+            top:30px;            
+        }
+
+        .visaPos {
+            right: 120px;
+        }
+        .masterPos{
+            right: 90px;
+        }
+        .amexPos {
+            right: 60px;
+        }
+        .discPos {
+            right: 30px;
+        }
+
+        .cvcPos {
+            position: absolute;
+            top:70px;
+            right: 30px;
+        }
     }
- 
+
+    /*++++++++++++++++++++++++++++++++++++++++++++++++ Form Validation+++++++++++++++++++++++++++++++++++++ */
+
+        /*  Icons styles*/
+
+    .errorIcon, .okIcon {
+        visibility: hidden;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+    }
+
+    .errorIconD, .okIconD {     /* Date icons*/
+        visibility: hidden;
+        position: absolute;
+        top: 70px;
+        right: 175px;
+       
+    }
+
+    .errorIconC, .okIconC {     /* CVC icons*/
+        visibility: hidden;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+    }
+
+    .errorMessage {
+        visibility: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .input--success{
+        input {
+            border-color: #2ecc71;
+        }
+        .okIcon {
+            color: #2ecc71;
+            visibility: visible;
+        }
+        .errorMessage {
+            visibility: visible;
+        }
+    } 
+
+    .input--successD {                  /* In case date is valid */
+        input {
+            border-color: #2ecc71;
+        }
+        .okIconD {
+            color: #2ecc71;
+            visibility: visible;
+        }
+        .errorMessage {
+            visibility: visible;
+        }
+    }
+
+    .input--successC {                  /* In case cvc is valid */
+        input {
+            border-color: #2ecc71;
+        }
+        .okIconC {
+            color: #2ecc71;
+            visibility: visible;
+        }
+        .errorMessage {
+            visibility: visible;
+        }
+    }
+
+    .input--error{
+        input {
+            border-color: #e74c3c;
+        }
+        .errorIcon {
+            color: #e74c3c;
+            visibility: visible;
+        }
+        .errorMessage {
+            visibility: visible;
+        }
+        
+    }
+    .input--errorD {                        /* In case date is invalid */
+        input {
+            border-color: #e74c3c;
+        }
+        .errorIconD {
+            color: #e74c3c;
+            visibility: visible;
+        }
+        .errorMessage {
+            visibility: visible;
+        }
+        
+    }
+
+    .input--errorC{                         /* In case cvc is invalid */
+        input {
+            border-color: #e74c3c;
+        }
+        .errorIconC {
+            color: #e74c3c;
+            visibility: visible;
+        }
+        .errorMessage {
+            visibility: visible;
+        }
+        
+    }
+
+    .errorMsgPosition {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+    
  }
 
  /* FOOTER */

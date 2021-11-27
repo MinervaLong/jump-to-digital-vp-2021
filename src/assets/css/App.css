@@ -13,6 +13,14 @@ body {
 }
 
 /*-------------------------------------MOBILE & TABLET VIEW------------------------------------------*/
+.mobileView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
 /*BACK TO THE MARKET COMPONENT */
 .getBack {
   display: flex;
@@ -106,6 +114,11 @@ body {
   color: dimgray;
 }
 
+#payForm {
+  width: 400px;
+  max-width: 100%;
+}
+
 /* TEXT BETWEEN HORIZONTAL LINE */
 .lineText {
   color: dimgray;
@@ -113,7 +126,7 @@ body {
   border-bottom: 1px solid #ddd;
   line-height: 0;
   padding: 0;
-  margin-bottom: 3rem;
+  margin: 3rem 0 3rem 0;
 }
 .lineText span {
   background-color: #fff;
@@ -126,6 +139,8 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  /*++++++++++++++++++++++++++++++++++++++++++++++++ Form Validation+++++++++++++++++++++++++++++++++++++ */
+  /*  Icons styles*/
 }
 .form .form--boxShadow {
   box-shadow: 0px 3px 5px 0px rgba(181, 181, 181, 0.75);
@@ -134,6 +149,8 @@ body {
   line-height: 2;
   border: 1px solid #DEDEDE;
   border-radius: 4px;
+  display: block;
+  padding: 0.2rem;
 }
 .form .form__inputWrapper--selectBg {
   background-color: #fff;
@@ -146,6 +163,8 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  padding-bottom: 20px;
+  position: relative;
 }
 .form .form__inputWrapper label {
   margin-bottom: 0.6rem;
@@ -163,7 +182,131 @@ body {
   justify-content: center;
 }
 .form .form__inputWrapper .inputGroup__down input {
-  width: 50%;
+  width: 95%;
+}
+.form .form__inputWrapper .visaPos, .form .form__inputWrapper .masterPos, .form .form__inputWrapper .amexPos, .form .form__inputWrapper .discPos {
+  position: absolute;
+  top: 30px;
+}
+.form .form__inputWrapper .visaPos {
+  right: 120px;
+}
+.form .form__inputWrapper .masterPos {
+  right: 90px;
+}
+.form .form__inputWrapper .amexPos {
+  right: 60px;
+}
+.form .form__inputWrapper .discPos {
+  right: 30px;
+}
+.form .form__inputWrapper .cvcPos {
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
+.form .errorIcon, .form .okIcon {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.form .errorIconD, .form .okIconD {
+  /* Date icons*/
+  visibility: hidden;
+  position: absolute;
+  top: 70px;
+  right: 175px;
+}
+.form .errorIconC, .form .okIconC {
+  /* CVC icons*/
+  visibility: hidden;
+  position: absolute;
+  top: 70px;
+  right: 10px;
+}
+.form .errorMessage {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.form .input--success input {
+  border-color: #2ecc71;
+}
+.form .input--success .okIcon {
+  color: #2ecc71;
+  visibility: visible;
+}
+.form .input--success .errorMessage {
+  visibility: visible;
+}
+.form .input--successD {
+  /* In case date is valid */
+}
+.form .input--successD input {
+  border-color: #2ecc71;
+}
+.form .input--successD .okIconD {
+  color: #2ecc71;
+  visibility: visible;
+}
+.form .input--successD .errorMessage {
+  visibility: visible;
+}
+.form .input--successC {
+  /* In case cvc is valid */
+}
+.form .input--successC input {
+  border-color: #2ecc71;
+}
+.form .input--successC .okIconC {
+  color: #2ecc71;
+  visibility: visible;
+}
+.form .input--successC .errorMessage {
+  visibility: visible;
+}
+.form .input--error input {
+  border-color: #e74c3c;
+}
+.form .input--error .errorIcon {
+  color: #e74c3c;
+  visibility: visible;
+}
+.form .input--error .errorMessage {
+  visibility: visible;
+}
+.form .input--errorD {
+  /* In case date is invalid */
+}
+.form .input--errorD input {
+  border-color: #e74c3c;
+}
+.form .input--errorD .errorIconD {
+  color: #e74c3c;
+  visibility: visible;
+}
+.form .input--errorD .errorMessage {
+  visibility: visible;
+}
+.form .input--errorC {
+  /* In case cvc is invalid */
+}
+.form .input--errorC input {
+  border-color: #e74c3c;
+}
+.form .input--errorC .errorIconC {
+  color: #e74c3c;
+  visibility: visible;
+}
+.form .input--errorC .errorMessage {
+  visibility: visible;
+}
+.form .errorMsgPosition {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 /* FOOTER */
