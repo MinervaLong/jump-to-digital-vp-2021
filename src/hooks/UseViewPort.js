@@ -4,8 +4,9 @@ const useViewPort =() => {
     // Declare the variable which store the state os the windows size
     const [width, setWidth] = useState(window.innerWidth);
     
-    const handleWindowResize = () => setWidth(window.innerWidth);
+    
     useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
       // Update the size of the window when it changes 
       window.addEventListener('resize', () => setWidth(window.innerWidth));
       // Removes the Event Listener
