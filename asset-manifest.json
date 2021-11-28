@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/jump-to-digital-vp-2021/static/css/main.971e2a34.chunk.css",
+    "main.js": "/jump-to-digital-vp-2021/static/js/main.98f35b61.chunk.js",
+    "main.js.map": "/jump-to-digital-vp-2021/static/js/main.98f35b61.chunk.js.map",
+    "runtime-main.js": "/jump-to-digital-vp-2021/static/js/runtime-main.619bd3db.js",
+    "runtime-main.js.map": "/jump-to-digital-vp-2021/static/js/runtime-main.619bd3db.js.map",
+    "static/js/2.bf90ebfb.chunk.js": "/jump-to-digital-vp-2021/static/js/2.bf90ebfb.chunk.js",
+    "static/js/2.bf90ebfb.chunk.js.map": "/jump-to-digital-vp-2021/static/js/2.bf90ebfb.chunk.js.map",
+    "index.html": "/jump-to-digital-vp-2021/index.html",
+    "static/css/main.971e2a34.chunk.css.map": "/jump-to-digital-vp-2021/static/css/main.971e2a34.chunk.css.map",
+    "static/js/2.bf90ebfb.chunk.js.LICENSE.txt": "/jump-to-digital-vp-2021/static/js/2.bf90ebfb.chunk.js.LICENSE.txt",
+    "static/media/dollar_icon.b910e937.png": "/jump-to-digital-vp-2021/static/media/dollar_icon.b910e937.png",
+    "static/media/product_image.050af137.png": "/jump-to-digital-vp-2021/static/media/product_image.050af137.png",
+    "static/media/redsys_logo.cb76142e.jpg": "/jump-to-digital-vp-2021/static/media/redsys_logo.cb76142e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.619bd3db.js",
+    "static/js/2.bf90ebfb.chunk.js",
+    "static/css/main.971e2a34.chunk.css",
+    "static/js/main.98f35b61.chunk.js"
+  ]
+}
