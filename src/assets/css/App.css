@@ -21,7 +21,7 @@ body {
   align-items: center;
 }
 
-/*BACK TO THE MARKET COMPONENT */
+/* BACK TO THE MARKET COMPONENT */
 .getBack {
   display: flex;
   flex-direction: row;
@@ -72,7 +72,7 @@ body {
   margin: 0;
   text-align: center;
 }
-.product figure .product__laptop {
+.product figure .product__laptopImg {
   min-width: 10rem;
   width: 35%;
   height: auto;
@@ -94,7 +94,7 @@ body {
   border: none;
   cursor: pointer;
 }
-.btn .btn__wrapper {
+.btn .btn__wrapperImg {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -103,23 +103,24 @@ body {
 }
 
 /* Classes depending of type of button */
-.appleButton {
+.btn__appleButton {
   background-color: #000;
   color: #FFF;
 }
 
-.priceButton {
+.btn__priceButton {
   background-color: #3C4257;
   border: none;
   color: dimgray;
 }
 
-#payForm {
+/* PAYFORM COMPONENT */
+.payForm {
   width: 400px;
   max-width: 100%;
 }
 
-/* TEXT BETWEEN HORIZONTAL LINE */
+/* Text between horizontal line */
 .lineText {
   color: dimgray;
   text-align: center;
@@ -133,13 +134,13 @@ body {
   padding: 0;
 }
 
-/* FORM */
+/* Form */
 .form {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  /*++++++++++++++++++++++++++++++++++++++++++++++++ Form Validation+++++++++++++++++++++++++++++++++++++ */
+  /*++++++++++++++++++ Form Validation+++++++++++++++++++ */
   /*  Icons styles*/
 }
 .form .form--boxShadow {
@@ -206,20 +207,21 @@ body {
   right: 30px;
 }
 .form .errorIcon, .form .okIcon {
+  /* Email, card number and name icons*/
   visibility: hidden;
   position: absolute;
   top: 40px;
   right: 10px;
 }
 .form .errorIconD, .form .okIconD {
-  /* Date icons*/
+  /* Date icons */
   visibility: hidden;
   position: absolute;
   top: 70px;
   right: 175px;
 }
 .form .errorIconC, .form .okIconC {
-  /* CVC icons*/
+  /* CVC icons */
   visibility: hidden;
   position: absolute;
   top: 70px;
@@ -255,7 +257,7 @@ body {
   visibility: visible;
 }
 .form .input--successC {
-  /* In case cvc is valid */
+  /* In case CVC is valid */
 }
 .form .input--successC input {
   border-color: #2ecc71;
@@ -291,7 +293,7 @@ body {
   visibility: visible;
 }
 .form .input--errorC {
-  /* In case cvc is invalid */
+  /* In case CVC is invalid */
 }
 .form .input--errorC input {
   border-color: #e74c3c;
@@ -303,7 +305,7 @@ body {
 .form .input--errorC .errorMessage {
   visibility: visible;
 }
-.form .errorMsgPosition {
+.form .inputGroup__errorMsgPos {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -337,8 +339,7 @@ body {
   margin-left: 1rem;
 }
 
-/*---------------------------------------------DESKTOP VIEW------------------------------------------------------*/
-/* Desktop view */
+/*---------------------------------------------DESKTOP VIEW--------------------------------------------*/
 .desktopView {
   margin: 0;
   padding: 0;
@@ -364,7 +365,7 @@ body {
   margin-left: 5rem;
 }
 
-/*Product*/
+/* PRODUCT */
 .product--desktop {
   display: flex;
   flex-direction: column;
@@ -406,7 +407,7 @@ body {
   height: auto;
 }
 
-/*Footer*/
+/* FOOTER */
 .footer--desktop {
   display: flex;
   flex-direction: row;

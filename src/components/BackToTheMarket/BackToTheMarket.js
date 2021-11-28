@@ -1,4 +1,4 @@
- import LeftArrow from '../../assets/icons/left_arrow_icon.png'
+ import LeftArrow from '../../assets/icons/left_arrow_icon.png';
  
  const BackToTheMarket = () => {
     return (
@@ -9,4 +9,4 @@
     )
 }
 
-export default BackToTheMarket
+export default BackToTheMarket;
