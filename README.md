@@ -9,7 +9,7 @@ Barcelona Digital Talent have organized a Hackathon with a series of challenges 
 * Backend
 * Data
 
-The first phase is online, from 22 to 28 of November. The best 80 participants will participate in a face-to-face competition organized by teams the next 10th December, as part of a tech event with conferences and bussiness meetings, among other activities. More info [here](https://barcelonadigitaltalent.com/jump2digital/)
+The first phase is online, from 22 to 28 of November. The best 80 participants will take part in a face-to-face competition organized by teams the next 10th December, as part of a tech event with conferences and bussiness meetings, among other activities. More info [here](https://barcelonadigitaltalent.com/jump2digital/)
 
 ## Usage
 
@@ -33,7 +33,7 @@ This project use ES6 syntaxis and async/ await pattern with axios to call the AP
 
 ## Stack 
 
-Willing to keep practicing React and trying new libraries combination, I have chosen to built this challenge with:
+Willing to keep practicing React and trying new libraries combination, I have chosen to build this challenge with:
 
 * [React](https://reactjs.org/) (Hooks)
 * [Sass](https://sass-lang.com/)
@@ -44,13 +44,13 @@ Willing to keep practicing React and trying new libraries combination, I have ch
 
 ## API/Component
 
-The folder structure is divided in assets, components and hooks with a custom hook for responsiveness using conditional rendering -credits to this [source](https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/).
+The folder structure is divided in assets, components and hooks, with a custom hook for responsiveness using conditional rendering -credits to this [source](https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/). Conditional classNames have been used as well.
 
 ![folder-distribution](https://user-images.githubusercontent.com/54006453/143768852-0b88307f-b37b-4749-ae5c-4111d89d0388.png)
 
 Components are imported to App.js except Button, which is reused twice in PayForm component. 
-The logic is placed in App component and passed to child components through props. 
-The list of countries and codes is called from useEffect hook and form validation is coded with vanilla JS, regular expressions and validator.js library, inside arrow functions that activate through onChange events.
+The logic is placed in App component and passed to child components through props. Semantic HTML tags and aria-label attributes have been applied when necessary.
+The list of countries and codes is called from useEffect hook and form validation is coded with vanilla JS, regular expressions and validator.js library inside arrow functions.
 
 ## Installation
 
@@ -71,10 +71,11 @@ If you want to play with it:
 ```
 ## Roadmap and visuals
 
-github pages here
+See the project in action [here](https://minervalong.github.io/jump-to-digital-vp-2021/).
+
 ## Contact info
 
-> minervaTest@protonmail.com Vanesa Perea
+> minervaTest@protonmail.com || Vanesa Perea
 
 ## Credits
 
