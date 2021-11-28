@@ -1,12 +1,12 @@
-import ImgProduct from '../../assets/images/product_image.png'
-import DollarIcon from '../../assets/icons/dollar_icon.png'
-import useViewPort from '../../hooks/UseViewPort'
+import ImgProduct from '../../assets/images/product_image.png';
+import DollarIcon from '../../assets/icons/dollar_icon.png';
+import useViewPort from '../../hooks/UseViewPort';
 
 const Product = () => {
-    const {width} = useViewPort();
+    const { width } = useViewPort();
     const breakPoint = 1024;
     return (
-        <div className='productWrapper'>
+        <div>
             { width < breakPoint ?
             (<section className='product' aria-label='Product price and image'>
                 <div className='product__textWrapper'>
@@ -16,7 +16,7 @@ const Product = () => {
                         <p>899.00</p>
                     </div>
                 </div>
-                <figure><img className='product__laptop' alt='Laptop product' src={ImgProduct}/></figure>
+                <figure><img className='product__laptopImg' alt='Laptop product' src={ImgProduct}/></figure>
             </section>)
             :
             (<section className=' product--desktop' aria-label='Product price and image'>
@@ -30,11 +30,9 @@ const Product = () => {
                 <figure><img className='product__laptopImg--desktop' alt='Laptop product' src={ImgProduct}/></figure>
             </section>
             )
-
             }
-        </div>
-        
+        </div>        
     )
 }
 
-export default Product
+export default Product;

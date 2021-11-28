@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 
 const useViewPort =() => {
     // Declare the variable which store the state os the windows size

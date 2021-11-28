@@ -15,8 +15,6 @@ body {
 
 }
 
-
-
 .container__component {
     margin-bottom: 2.5rem;
 }
@@ -31,7 +29,7 @@ body {
     align-items: center;
 }
 
- /*BACK TO THE MARKET COMPONENT */
+ /* BACK TO THE MARKET COMPONENT */
  
  .getBack {
     display: flex;
@@ -92,7 +90,7 @@ body {
         margin: 0;
         text-align: center;
 
-        .product__laptop {
+        .product__laptopImg {
             min-width: 10rem;
             width: 35%;
             height: auto;
@@ -118,7 +116,7 @@ body {
     border: none;
     cursor: pointer;
 
-    .btn__wrapper {
+    .btn__wrapperImg {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -127,25 +125,27 @@ body {
      }
  } 
 
- /* Classes depending of type of button */
+    /* Classes depending of type of button */
 
- .appleButton {
+ .btn__appleButton {
     background-color: $appleBtnColor;
     color: #FFF;
  }
 
- .priceButton {
+ .btn__priceButton {
     background-color: $priceBtnColor;
     border: none;
     color: $fontColor;
  }
 
- #payForm {
-     width: 400px;
-     max-width: 100%;
+ /* PAYFORM COMPONENT */
+
+ .payForm {
+    width: 400px;
+    max-width: 100%;
  }
 
- /* TEXT BETWEEN HORIZONTAL LINE */
+ /* Text between horizontal line */
 
  .lineText {
     color: $fontColor;
@@ -162,7 +162,7 @@ body {
  }
 
 
- /* FORM */
+    /* Form */
 
  .form {
     display: flex;
@@ -244,26 +244,25 @@ body {
         }
     }
 
-    /*++++++++++++++++++++++++++++++++++++++++++++++++ Form Validation+++++++++++++++++++++++++++++++++++++ */
+    /*++++++++++++++++++ Form Validation+++++++++++++++++++ */
 
         /*  Icons styles*/
 
-    .errorIcon, .okIcon {
+    .errorIcon, .okIcon {       /* Email, card number and name icons*/
         visibility: hidden;
         position: absolute;
         top: 40px;
         right: 10px;
     }
 
-    .errorIconD, .okIconD {     /* Date icons*/
+    .errorIconD, .okIconD {     /* Date icons */
         visibility: hidden;
         position: absolute;
         top: 70px;
-        right: 175px;
-       
+        right: 175px;       
     }
 
-    .errorIconC, .okIconC {     /* CVC icons*/
+    .errorIconC, .okIconC {     /* CVC icons */
         visibility: hidden;
         position: absolute;
         top: 70px;
@@ -290,7 +289,7 @@ body {
         }
     } 
 
-    .input--successD {                  /* In case date is valid */
+    .input--successD {           /* In case date is valid */
         input {
             border-color: #2ecc71;
         }
@@ -303,7 +302,7 @@ body {
         }
     }
 
-    .input--successC {                  /* In case cvc is valid */
+    .input--successC {           /* In case CVC is valid */
         input {
             border-color: #2ecc71;
         }
@@ -326,10 +325,10 @@ body {
         }
         .errorMessage {
             visibility: visible;
-        }
-        
+        }        
     }
-    .input--errorD {                        /* In case date is invalid */
+
+    .input--errorD {              /* In case date is invalid */
         input {
             border-color: #e74c3c;
         }
@@ -339,11 +338,10 @@ body {
         }
         .errorMessage {
             visibility: visible;
-        }
-        
+        }        
     }
 
-    .input--errorC{                         /* In case cvc is invalid */
+    .input--errorC{               /* In case CVC is invalid */
         input {
             border-color: #e74c3c;
         }
@@ -353,16 +351,14 @@ body {
         }
         .errorMessage {
             visibility: visible;
-        }
-        
+        }        
     }
 
-    .errorMsgPosition {
+    .inputGroup__errorMsgPos {
         position: absolute;
         display: flex;
         flex-direction: column;
-    }
-    
+    }    
  }
 
  /* FOOTER */
@@ -389,8 +385,7 @@ body {
         a:link, a:visited{
             color: $fontColor;
             text-decoration: none;           
-        }
-        
+        }        
 
         .footer__linksWrapper--terms{
             margin-right: 1rem;
@@ -401,9 +396,8 @@ body {
     }
 }
 
-/*---------------------------------------------DESKTOP VIEW------------------------------------------------------*/
+/*---------------------------------------------DESKTOP VIEW--------------------------------------------*/
 
-/* Desktop view */
 .desktopView {
     margin: 0;
     padding:0;
@@ -415,9 +409,9 @@ body {
 
 .desktopView__col {        
     border:none;
-    flex: 1;
-    
+    flex: 1;    
 }
+
 .desktopView__col--right {  
     box-shadow: -5px 0px 13px 0px rgba(50, 50, 50, 0.39);
     display:flex;
@@ -429,7 +423,8 @@ body {
     margin-left: 5rem;
 }
 
-/*Product*/
+/* PRODUCT */
+
 .product--desktop {
     display: flex;
     flex-direction: column;
@@ -470,6 +465,7 @@ body {
         margin: 0;
         text-align: center;
         width: 50%;
+
         .product__laptopImg--desktop {
             min-width: 10rem;
             width: 100%;
@@ -480,7 +476,7 @@ body {
  }
 
 
-/*Footer*/
+/* FOOTER */
 
 .footer--desktop {
     display: flex;
