@@ -1,5 +1,4 @@
 
-
 const  Button = ({
     type,
     text,
@@ -8,7 +7,6 @@ const  Button = ({
     icon,
     iconPresence,
     iconStyles,
-    animated
 }) => {
     
     return(
@@ -17,7 +15,7 @@ const  Button = ({
             className={`${className} btn`}
         >
         {iconPresence === true ?
-            <div className='btn__wrapper'>
+            <div className='btn__wrapperImg'>
                 <img alt='Apple Payment' src={icon} style={{...iconStyles}} /><span style={{...textStyles}}>{text}</span>
             </div> 
             :

@@ -5,7 +5,7 @@ import axios from 'axios';
 import BackToTheMarket from './components/BackToTheMarket/BackToTheMarket';
 import Product from './components/Product/Product';
 import Payform from './components/Payform/Payform';
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer';
 import useViewPort from './hooks/UseViewPort';
 
 
@@ -23,7 +23,7 @@ const App = () => {
     validator.isEmail(email) ? setEmailError('Valid email') : setEmailError('Enter valid Email');      
   }
 
-  const [cardNumError, setCardNumError] = useState('')
+  const [cardNumError, setCardNumError] = useState('');
   const validateCardNumber = (value) => {
     // Cards Regular Expression to test
     let amexRegex = /^(?:3[47][0-9]{13})$/;
@@ -37,22 +37,22 @@ const App = () => {
     }else if(cardNum.match(masterRegex)){
       setCardNumError('Valid Master Card');
     }else if(cardNum.match(visaRegex)){
-      setCardNumError('Valid Visa')
+      setCardNumError('Valid Visa');
     }else if(cardNum.match(discoverRegex)){
-      setCardNumError('Valid Discover')
+      setCardNumError('Valid Discover');
     }else {
       setCardNumError('Enter a valid credit card number');
     }    
   }
 
-  const [dateError, setDateError] = useState('')
+  const [dateError, setDateError] = useState('');
   const validateDate = (value) => {
     // Input value 
     let expDate = value;
     let expDateRegex = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/; 
     // Check if it includes slash
     if(expDateRegex.test(expDate) === false){
-      setDateError('Use the MM/YY format')
+      setDateError('Use the MM/YY format');
     }else{
       // Get month & year parts
       let splitExpDate = expDate.split('/');
@@ -66,7 +66,7 @@ const App = () => {
       
       //Compare the two dates to check if the value introduced is outdated
       if(expYear > thisYear || (expYear === thisYear && expMonth >= thisMonth)){
-        setDateError('Valid date')
+        setDateError('Valid date');
       }else{
         setDateError('This date is outdated');
       }
@@ -74,10 +74,10 @@ const App = () => {
 
   }
 
-  const [cvcError, setCVCError] = useState('')
+  const [cvcError, setCVCError] = useState('');
   const validateCVC = (value) => {
     let cvc = value;
-    validator.matches(cvc, /^\d{3,4}$/) ? setCVCError('Valid CVC') : setCVCError('Enter a valid CVC')
+    validator.matches(cvc, /^\d{3,4}$/) ? setCVCError('Valid CVC') : setCVCError('Enter a valid CVC');
   }
   
   const [nameError, setNameError] = useState('');
@@ -99,31 +99,31 @@ const App = () => {
 
     // Variables 
   const [countries, setCountries] = useState([]); 
-  const [callError, setCallError] = useState(false)
-  const [zip, setZip] = useState('ZIP')
+  const [callError, setCallError] = useState(false);
+  const [zip, setZip] = useState('ZIP');
 
     // Call the data at the beginning
   useEffect(() => {
-      getData()
+      getData();
    }, []) 
 
     // API call
   const getData = async() => {
-    setCallError(false)
+    setCallError(false);
     try {
       const answer = await axios.get(API_URL);
-      const result = answer.data.data
+      const result = answer.data.data;
       const countriesArray = result.map((country, index) => {
         const name = country.name;
         const zip = country.Iso2;
-        const indx = index
-        return {indx, name, zip}
+        const indx = index;
+        return {indx, name, zip};
         })
-      countriesArray.unshift({indx: countriesArray.length + 1, name:'Select a country', zip:'ZIP'})
+      countriesArray.unshift({indx: countriesArray.length + 1, name:'Select a country', zip:'ZIP'});
       setCountries(countriesArray);
     }catch(error){
-      setCallError(true)
-      alert('Is something wrong with API call')
+      setCallError(true);
+      alert('Is something wrong with API call');
     }
   }   
     // Store the options in a variable
@@ -136,7 +136,7 @@ const App = () => {
   const asignZIP = (e) => {setZip(e.target.value)}
 
   return (
-    <main className='container'>
+    <main id='container'>
     { width < breakPoint ? 
     <div className='mobileView'>
       {/*BACK TO THE MARKET */}
@@ -165,8 +165,7 @@ const App = () => {
         asignZIP={asignZIP}
         options={options}
         zip={zip}
-        callError={callError}
-      
+        callError={callError}      
       />
      
       {/* FOOTER */}
@@ -177,28 +176,25 @@ const App = () => {
     
     :
     
-   (<div className='desktopView'> 
-
-     <div className='desktopView__col desktopView__col--left'>
+   (<div className='desktopView'>
+     <div className='desktopView__col'>
        {/*BACK TO THE MARKET */}
        <section className='getBack--desktop container__component'>
         <BackToTheMarket />        
       </section>
 
       {/* PRODUCT */}
-      <section className=''> 
+      <section> 
        <Product />
       </section>
 
        {/* FOOTER */}
-       <section className=''>
+       <section>
         <Footer />
       </section>
-
     </div>
 
-    <div className='desktopView__col desktopView__col--right'>
-    
+    <div className='desktopView__col desktopView__col--right'>    
       {/* PAYFORM */}
         <Payform
          handleSubmit={handleSubmit}
@@ -216,11 +212,9 @@ const App = () => {
          options={options}
          zip={zip}
          callError={callError}  
-        />
-     
-    </div>
-    
-    </div>)
+        />     
+    </div>    
+  </div>)
 
     }
     </main>
