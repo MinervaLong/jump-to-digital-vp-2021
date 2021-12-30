@@ -11,6 +11,8 @@ Barcelona Digital Talent have organized a Hackathon with a series of challenges 
 
 The first phase is online, from 22 to 28 of November. The best 80 participants will take part in a face-to-face competition organized by teams the next 10th December, as part of a tech event with conferences and bussiness meetings, among other activities. More info [here](https://barcelonadigitaltalent.com/jump2digital/)
 
+ [Feedback link](https://nuwe.io/report/61a3a61464d502001f57bff3)
+
 ## Usage
 
 This project use ES6 syntaxis and async/ await pattern with axios to call the API.
